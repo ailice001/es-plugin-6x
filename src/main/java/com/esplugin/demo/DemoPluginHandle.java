@@ -22,7 +22,9 @@ public class DemoPluginHandle implements NativeScriptFactory {
 //        logger.info("this is first value : {} ", first);
         String second = params == null ? null : XContentMapValues.nodeStringValue(params.get("second"), null);
 //        logger.info("this is second value : {} ", second);
+//        byte[] send = XContentMapValues.nodeb
         return new GetScoreScript(first, second);
+
     }
 
     public boolean needsScores() {
