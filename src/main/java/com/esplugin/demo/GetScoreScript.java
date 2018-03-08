@@ -8,12 +8,12 @@ public class GetScoreScript extends AbstractDoubleSearchScript {
 
     private final static Logger logger = LogManager.getLogger(GetScoreScript.class);
 
-    private String temp1;
-    private String temp2;
+    private String first;
+    private String second;
 
     GetScoreScript(String str1, String str2) {
-        temp1 = str1;
-        temp2 = str2;
+        first = str1;
+        second = str2;
     }
 
     /**
@@ -22,7 +22,10 @@ public class GetScoreScript extends AbstractDoubleSearchScript {
     @Override
     public double runAsDouble() {
         logger.info("into success!");
-        if (temp1.contains("test")||temp2.contains("test"))
+        // 获取es结构数据
+        String test = (String) source().get("test");
+        logger.info("get result test: {} ， first : {} ，send : {}",test , first , second);
+        if (first.contains("test")&&test.contains(second))
             return 1;
         return Double.MAX_VALUE;
     }
