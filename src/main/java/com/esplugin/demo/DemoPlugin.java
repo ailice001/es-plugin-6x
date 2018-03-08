@@ -14,14 +14,14 @@ import org.elasticsearch.script.NativeScriptFactory;
 public class DemoPlugin extends Plugin implements ActionPlugin, ScriptPlugin {
     private final static Logger logger = LogManager.getLogger(DemoPlugin.class);
 
-    // 初始化插件
+    // init
     public DemoPlugin() {
         super();
         logger.warn("Create the demo Score Plugin success !");
-    }  
+    }
 
-    // lang  使用  native
+    // lang : native
     public List<NativeScriptFactory> getNativeScripts() {
         return Collections.<NativeScriptFactory>singletonList(new DemoPluginHandle());
-    }  
+    }
 }

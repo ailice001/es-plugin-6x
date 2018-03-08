@@ -37,7 +37,7 @@
                     <appendAssemblyId>false</appendAssemblyId>
                     <outputDirectory>${project.build.directory}/releases/</outputDirectory>
                     <descriptors>
-                        <descriptor>${basedir}/src/main/assembly/plugin.xml</descriptor>
+                        <descriptor>${basedir}/src/assembly/plugin.xml</descriptor>
                     </descriptors>
                 </configuration>
                 <executions>
