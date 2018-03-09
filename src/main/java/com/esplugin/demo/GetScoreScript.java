@@ -24,7 +24,6 @@ public class GetScoreScript extends AbstractDoubleSearchScript {
         logger.info("into success!");
         // 获取es结构数据
         String test = (String) source().get("test");
-        byte[] desc = (byte[]) source().get("test");
 
         logger.info("get result test: {} ， first : {} ，send : {}",test , first , second);
         if (first.contains("test")&&test.contains(second))

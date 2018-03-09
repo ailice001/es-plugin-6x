@@ -10,20 +10,20 @@
 * 测试：
     * 首先测试是否安装成功`bin/elasticsearch-plugin list`
 
-----测试数据    这里使用kibana的DevTools
-PUT test-index/default/1
+----测试数据    这里使用kibana的DevTools \n
+PUT test/default/1
 {
   "test":"one",
-  "other":"1"
+  "other":1
 }
 
-PUT test-index/default/2
+PUT test/default/2
 {
   "test":"two",
   "other":"1"
 }
 
-PUT test-index/default/3
+PUT test/default/3
 {
   "test":"test1",
   "other":"1"
@@ -35,13 +35,14 @@ PUT test/default/4
   "other":"1"
 }
 
-PUT test-index/default/5
+PUT test/default/5
 {
   "test":"test2",
   "other":"1"
 }
 
---  调用方式
+--  调用方式 
+
 GET test/_search 
 {
     "query": {
@@ -69,6 +70,7 @@ GET test/_search
   }
   
 --结果   包裹test的返回1 否则返回最大的Double值
+  
   {
     "took": 11,
     "timed_out": false,
@@ -150,28 +152,3 @@ GET test/_search
     }
   }
   
------ 使用curl执行
-  curl -XGET localhost:9200/test/_search -d '{
-    "query": {
-      "function_score": {
-        "query": {
-          "match_all": {}
-        },
-        "script_score": {
-          "script": {
-            "inline":"demoPlugin",
-            "lang": "native",
-            "params": {
-              "fisrt" : "test" ,
-              "second": "test" 
-            }
-          }
-        }
-      }
-    },
-    "sort":{
-        "_score":{
-          "order":"asc"
-        }
-      }
-  }'
