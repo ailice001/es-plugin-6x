@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
-    <output url="file://$MODULE_DIR$/../firstesplugindemo/target/classes" />
-    <output-test url="file://$MODULE_DIR$/../firstesplugindemo/target/test-classes" />
-    <content url="file://$MODULE_DIR$/../firstesplugindemo">
-      <sourceFolder url="file://$MODULE_DIR$/../firstesplugindemo/src/main/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../firstesplugindemo/src/main/resources" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/../firstesplugindemo/src/test/java" isTestSource="true" />
-      <excludeFolder url="file://$MODULE_DIR$/../firstesplugindemo/target" />
+    <output url="file://$MODULE_DIR$/../es-plugin-5x/target/classes" />
+    <output-test url="file://$MODULE_DIR$/../es-plugin-5x/target/test-classes" />
+    <content url="file://$MODULE_DIR$/../es-plugin-5x">
+      <sourceFolder url="file://$MODULE_DIR$/../es-plugin-5x/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../es-plugin-5x/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../es-plugin-5x/src/test/java" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/../es-plugin-5x/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
