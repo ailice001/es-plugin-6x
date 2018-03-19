@@ -1,5 +1,5 @@
 * 环境依赖：
-    * elasticsearch >= 5.x
+    * elasticsearch >= 6.x
     * pom中对不同elasticsearch版本的依赖，最终插件只能应用在对应版本的elasticsearch上
 
 * 编译安装：

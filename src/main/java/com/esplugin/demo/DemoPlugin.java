@@ -1,27 +1,20 @@
 package com.esplugin.demo;
 
 
-import java.util.Collections;
-import java.util.List;
+import java.util.Collection;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.elasticsearch.plugins.ActionPlugin;
+import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.plugins.Plugin;
 import org.elasticsearch.plugins.ScriptPlugin;
-import org.elasticsearch.script.NativeScriptFactory;
+import org.elasticsearch.script.ScriptContext;
+import org.elasticsearch.script.ScriptEngine;
 
-public class DemoPlugin extends Plugin implements ActionPlugin, ScriptPlugin {
-    private final static Logger logger = LogManager.getLogger(DemoPlugin.class);
+public class DemoPlugin extends Plugin implements  ScriptPlugin {
 
-    // init
-    public DemoPlugin() {
-        super();
-        logger.warn("Create the demo Score Plugin success !");
+    @Override
+    public ScriptEngine getScriptEngine(Settings settings, Collection<ScriptContext<?>> contexts) {
+        return new MyScriptEngine();
     }
 
-    // lang : native
-    public List<NativeScriptFactory> getNativeScripts() {
-        return Collections.<NativeScriptFactory>singletonList(new DemoPluginHandle());
-    }
+
 }
